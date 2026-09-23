@@ -73,6 +73,7 @@ Quote source text directly in each field below. Paraphrase does not satisfy them
 [The agreement score of each run you did, in order. A single run is a complete answer if
 only one run occurred. **The last score in your list must match the agreement line in the
 `eval-run.txt` you committed** — that file is the record of your final run.]
+
 `agreement: 16/20 scored items  (bar: 18/20: below the bar)`
 
 `agreement: 2/4 scored items`
@@ -89,6 +90,7 @@ only one run occurred. **The last score in your list must match the agreement li
 [One scored issue, identified by id (`issue-01` through `issue-20`; the `calib-`
 issues are not scored). State your rubric's decision, the gold label, and the
 reasoning that produced your rubric's result.]
+
 `issue-19`
 
 `issue-19  accept  accept  yes`
@@ -100,6 +102,7 @@ My rubric's final decision was `accept`, and the gold label was `accept`. Earlie
 
 [One check from the `rubric.md` uploaded to `tools/issue-select/`, quoted as it is
 currently written, with the reasoning behind its current form.]
+
 `| scope-fits | Issue body and comment thread | Pass unless the issue is explicitly a tracking or umbrella issue, is only a support question, has design discussion that is still unresolved, or a maintainer explicitly says the fix requires major core-internal changes. Also fail if the issue has several abandoned contribution attempts that suggest it is harder than it appears. A short description, multiple files, several steps, performance work, threading, or multiple suggested solutions do not by themselves make the issue fail. | required |`
 
 I revised this check because my earlier version was too strict about issues that contained several steps or possible technical approaches. That caused `issue-19` to fail even though it described one specific bug. The current form focuses on stronger evidence that the scope is unsuitable, such as an umbrella issue, a support question, unresolved design discussion, explicit major core-internal work, or several abandoned contribution attempts.
@@ -111,6 +114,7 @@ I revised this check because my earlier version was too strict about issues that
 result it changes, a canary you re-ran with `--only`, a case you accept it will miss, or a
 stated reason nothing changed elsewhere. "Nothing changed, and here is how I know" earns
 the point in full when the reason follows.]
+
 One trade-off is that the current check can accept an issue that is technically difficult as long as the problem itself is clearly bounded. `issue-19` was my canary for this change. Before revising the check it was rejected with `failed: scope-fits`; after the revision I re-ran it with `--only issue-19` and received:
 
 `issue-19  accept  accept  yes`
