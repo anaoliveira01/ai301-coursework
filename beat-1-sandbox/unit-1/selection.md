@@ -17,6 +17,7 @@ wrong label is not graded.
 
 [The individual Path Review issue page. A link to the repository or the issue list
 does not satisfy this field.]
+
 https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72
 
 
@@ -24,6 +25,7 @@ https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72
 
 [Your skill's live-mode output for this issue, pasted verbatim and ending with the
 fenced JSON verdict block. A summary does not satisfy this field.]
+
 Re-checking #72 for any change since the last grading run, then grading it on its own.
 
 Live mode. #72 is in the scoped repo (codepath/pathreview-ai301-fa26-s3), so it is a valid candidate. Nothing has changed on it since the earlier run today — still open, unassigned, one comment, zero PRs in the repo.
